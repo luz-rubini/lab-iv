@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <h2>Calculadora de edades</h2>
+        <br>
+        <h2>Ingrese dos edades</h2>
+      </div>
+  
+      <!-- Login Form -->
+      <form #myForm="ngForm" (ngSubmit)="limpiar(myForm)">
+        <input type="text" id="edad 1" class="fadeIn second" name="edad1" placeholder="edad 1" required="required" [(ngModel)]="edad1">
+        <input type="text" id="edad 2" class="fadeIn third" name="edad1" placeholder="edad 2" required="required" [(ngModel)]="edad2">
+        <button type ="button" class="btn btn-primary"(click)=sumar()>Calcular</button>
+        <button type="button" class="btn btn-primary" (click)=limpiar(myForm)>Limpiar</button>
+        <br>
+        <h3>Suma</h3>
+        <input type="text" name="suma" placeholder="Suma" required="required" [(ngModel)]="suma"readonly/>
+        <h3>Promedio</h3>
+        <input type="text" name="Promedio" placeholder="Promedio" required="required" [(ngModel)]="promedio" readonly/>
+      </form>
+    </div>
+  </div>
